@@ -411,7 +411,7 @@ nav#menu a.active::after { width: 100%; }
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2px;
+  gap: 10px;
 }
 
 .service-card {
@@ -889,8 +889,8 @@ footer p {
 @media (max-width: 480px) {
   .section { padding: 70px 0; }
   .hero-content h1 { font-size: 38px; }
-  .services-grid { grid-template-columns: 1fr; }
-  .service-card { padding: 18px 16px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-card { padding: 14px 12px; }
   .service-card p { font-size: 13px; }
   .service-card-header {
     display: flex;
