@@ -596,9 +596,11 @@ nav#menu a.active::after { width: 100%; }
   color: var(--dark);
 }
 
-@media (max-width: 900px)  { .gallery { columns: 3; } }
-@media (max-width: 640px)  { .gallery { columns: 2; } }
-@media (max-width: 400px)  { .gallery { columns: 1; } }
+@media (max-width: 900px) { .gallery { columns: 3; } }
+@media (max-width: 640px) {
+  .gallery { columns: 3; column-gap: 4px; }
+  .gallery-item { margin-bottom: 4px; border-radius: 4px; max-height: 120px; object-fit: cover; }
+}
 
 
 /* ─── WHY SECTION ───────────────────────────────────────────── */
