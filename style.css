@@ -730,6 +730,39 @@ nav#menu a.active::after { width: 100%; }
   border: 0;
   display: block;
 }
+.map-facade {
+  width: 100%;
+  height: 300px;
+  background: #1a1e2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.map-facade:hover .map-play {
+  background: var(--gold);
+  color: var(--dark);
+}
+.map-facade-inner {
+  text-align: center;
+  color: rgba(255,255,255,0.7);
+}
+.map-play {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  font-size: 20px;
+  margin-bottom: 12px;
+  transition: background var(--transition), color var(--transition);
+}
+.map-facade-inner p {
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
 
 /* ─── FOOTER ────────────────────────────────────────────────── */
 footer {

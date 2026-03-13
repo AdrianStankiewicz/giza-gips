@@ -31,7 +31,8 @@
   "email": "gizagips@wp.pl",
   "address": {
     "@type": "PostalAddress",
-    "addressRegion": "Trójmiasto",
+    "addressLocality": "Gdynia",
+    "addressRegion": "Pomorskie",
     "addressCountry": "PL"
   },
   "areaServed": {
@@ -61,7 +62,8 @@
 }
 </script>
 
-<link rel="preload" as="image" href="photos/realizacja-03.webp">
+<link rel="preload" as="image" href="photos/realizacja-03.webp" fetchpriority="high">
+<link rel="canonical" href="https://twoja-domena.pl/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -328,11 +330,12 @@
       </div>
     </div>
     <div class="contact-map-full">
-      <iframe
-        src="https://maps.google.com/maps?q=Polska&t=&z=7&ie=UTF8&iwloc=&output=embed"
-        title="Mapa"
-        loading="lazy">
-      </iframe>
+      <div class="map-facade" id="map-facade" onclick="var f=document.createElement('iframe');f.src='https://maps.google.com/maps?q=Gdynia,Polska&t=&z=11&ie=UTF8&iwloc=&output=embed';f.title='Mapa';f.style.cssText='width:100%;height:100%;border:0;display:block;';this.innerHTML='';this.appendChild(f);this.style.cursor='default';" role="button" tabindex="0" aria-label="Kliknij aby załadować mapę Google">
+        <div class="map-facade-inner">
+          <span class="map-play">▶</span>
+          <p>Kliknij aby załadować mapę</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -342,7 +345,7 @@
   <div class="container">
     <div class="section-header fade-up">
       <p class="section-label light">Portfolio</p>
-      <h2>Nasze realizacje</h2>
+      <h2>Przykładowe realizacje</h2>
     </div>
     <div class="gallery fade-up">
       <img src="photos/realizacja-01.webp" class="gallery-item" loading="lazy" alt="Realizacja 1">
