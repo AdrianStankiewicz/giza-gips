@@ -18,11 +18,13 @@ document.querySelectorAll('#menu a').forEach(link => {
 const items = Array.from(document.querySelectorAll('.gallery-item'))
 const lightbox = document.getElementById('lightbox')
 const lbImg = document.getElementById('lb-img')
+const lbCounter = document.getElementById('lb-counter')
 let lbIndex = 0
 
 function lbOpen(i) {
   lbIndex = i
   lbImg.src = items[i].src
+  lbCounter.textContent = `${i + 1} / ${items.length}`
   lightbox.classList.add('open')
   document.body.style.overflow = 'hidden'
 }
@@ -33,6 +35,7 @@ function lbClose() {
 function lbGo(dir) {
   lbIndex = (lbIndex + dir + items.length) % items.length
   lbImg.src = items[lbIndex].src
+  lbCounter.textContent = `${lbIndex + 1} / ${items.length}`
 }
 
 items.forEach((img, i) => img.addEventListener('click', () => lbOpen(i)))

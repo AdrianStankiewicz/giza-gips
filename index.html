@@ -11,6 +11,7 @@
 <meta name="keywords" content="remonty Trójmiasto, wykończenia wnętrz Gdańsk, gładzie gipsowe, glazurnictwo, instalacje elektryczne, zabudowy GK, elewacje, Roman Giziński GIZA">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0f1117">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 
 <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
 <meta property="og:type" content="website">
@@ -333,15 +334,48 @@
             </div>
           </a>
         </div>
+        <div class="contact-area">
+          <p class="contact-label">Obszar działania</p>
+          <div class="area-chips">
+            <span class="area-chip">Gdańsk</span>
+            <span class="area-chip">Gdynia</span>
+            <span class="area-chip">Sopot</span>
+            <span class="area-chip">Rumia</span>
+            <span class="area-chip">Reda</span>
+            <span class="area-chip">Wejherowo</span>
+            <span class="area-chip">Pruszcz Gdański</span>
+            <span class="area-chip">Tczew</span>
+            <span class="area-chip">Kartuzy</span>
+            <span class="area-chip">Puck</span>
+            <span class="area-chip">Nowy Dwór Gdański</span>
+          </div>
+        </div>
         <a href="tel:883481647" class="btn-primary">Zadzwoń i umów wycenę</a>
       </div>
-      <div class="contact-map">
-        <iframe
-          src="https://maps.google.com/maps?q=Polska&t=&z=7&ie=UTF8&iwloc=&output=embed"
-          title="Mapa"
-          loading="lazy">
-        </iframe>
+      <div class="contact-form-wrap">
+        <form class="contact-form" method="POST" action="mailto:gizagips@wp.pl" enctype="text/plain">
+          <div class="form-group">
+            <label for="cf-name">Imię i nazwisko</label>
+            <input type="text" id="cf-name" name="Imię" placeholder="Jan Kowalski" required>
+          </div>
+          <div class="form-group">
+            <label for="cf-phone">Telefon</label>
+            <input type="tel" id="cf-phone" name="Telefon" placeholder="600 000 000" required>
+          </div>
+          <div class="form-group">
+            <label for="cf-msg">Wiadomość</label>
+            <textarea id="cf-msg" name="Wiadomość" rows="4" placeholder="Krótki opis prac..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%">Wyślij zapytanie</button>
+        </form>
       </div>
+    </div>
+    <div class="contact-map-full">
+      <iframe
+        src="https://maps.google.com/maps?q=Polska&t=&z=7&ie=UTF8&iwloc=&output=embed"
+        title="Mapa"
+        loading="lazy">
+      </iframe>
     </div>
   </div>
 </section>
@@ -397,6 +431,7 @@
       <button id="lb-prev">&#8592;</button>
       <img id="lb-img" src="" alt="">
       <button id="lb-next">&#8594;</button>
+      <div id="lb-counter"></div>
     </div>
   </div>
 </section>

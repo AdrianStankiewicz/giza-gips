@@ -595,6 +595,16 @@ nav#menu a.active::after { width: 100%; }
   border-color: var(--gold);
   color: var(--dark);
 }
+#lb-counter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  letter-spacing: 1px;
+  pointer-events: none;
+}
 
 @media (max-width: 900px) { .gallery { columns: 3; } }
 @media (max-width: 640px) {
@@ -701,14 +711,77 @@ nav#menu a.active::after { width: 100%; }
   color: white;
 }
 
-.contact-map {
+.contact-form-wrap {
+  align-self: start;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+.form-group input,
+.form-group textarea {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: white;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  transition: border-color var(--transition);
+  resize: none;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.contact-area {
+  margin-bottom: 28px;
+}
+.contact-area .contact-label {
+  display: block;
+  margin-bottom: 10px;
+}
+.area-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.area-chip {
+  background: rgba(201,146,42,0.12);
+  border: 1px solid rgba(201,146,42,0.35);
+  color: var(--gold-lt);
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.contact-map-full {
+  margin-top: 50px;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
-.contact-map iframe {
+.contact-map-full iframe {
   width: 100%;
-  height: 420px;
+  height: 300px;
   border: 0;
   display: block;
 }
@@ -810,11 +883,12 @@ footer p {
   .hero-cta { flex-direction: column; align-items: center; }
   .btn-primary, .btn-outline { width: 100%; max-width: 280px; text-align: center; }
 
-  .contact-map iframe { height: 260px; }
+  .contact-map-full iframe { height: 220px; }
 }
 
 @media (max-width: 480px) {
   .section { padding: 70px 0; }
+  .hero-content h1 { font-size: 38px; }
   .services-grid { grid-template-columns: 1fr; }
   .service-card { padding: 18px 16px; }
   .service-card p { font-size: 13px; }
