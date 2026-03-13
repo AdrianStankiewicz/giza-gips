@@ -463,62 +463,6 @@ nav#menu a.active::after { width: 100%; }
 }
 .featured-card h3 { color: var(--gold-lt); }
 
-/* ─── ELEWACJE ──────────────────────────────────────────────── */
-.elev-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-.elev-img {
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-}
-.elev-img img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-}
-.elev-text h2 {
-  font-size: clamp(28px, 3.5vw, 42px);
-  color: var(--dark);
-  margin-bottom: 16px;
-}
-.elev-text > p {
-  color: var(--muted);
-  margin-bottom: 36px;
-  font-size: 16px;
-}
-
-.elev-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-.elev-list li {
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-}
-.elev-icon {
-  font-size: 24px;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-.elev-list strong {
-  display: block;
-  font-size: 16px;
-  color: var(--dark);
-  margin-bottom: 4px;
-}
-.elev-list p {
-  color: var(--muted);
-  font-size: 14px;
-  margin: 0;
-}
-
 /* ─── GALLERY (MASONRY) ─────────────────────────────────────── */
 .gallery {
   columns: 4;
@@ -532,6 +476,7 @@ nav#menu a.active::after { width: 100%; }
   cursor: pointer;
   transition: transform var(--transition), opacity var(--transition);
   break-inside: avoid;
+  image-orientation: from-image;
 }
 .gallery-item:hover {
   transform: scale(1.02);
