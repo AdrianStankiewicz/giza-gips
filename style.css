@@ -159,7 +159,7 @@ nav#menu a.active::after { width: 100%; }
 .hero {
   height: 100vh;
   min-height: 600px;
-  background: url("photos/realizacja-03.jpg") center / cover no-repeat;
+  background: url("photos/realizacja-03.webp") center / cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
