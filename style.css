@@ -831,15 +831,12 @@ footer p {
   #hamburger { display: flex; }
 
   .about-grid,
-  .elev-grid,
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  .elev-img { order: -1; }
   .about-badge { display: none; }
   .about-img-inner img { height: 300px; }
-  .elev-img img { height: 280px; }
   .featured-card { grid-column: span 1; }
 
   .stats-row {
